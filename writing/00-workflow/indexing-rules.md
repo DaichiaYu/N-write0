@@ -1,47 +1,61 @@
 # Indexing Rules
 
-## 核心原則
+本文件只規範索引與導覽文件的維護方式。
 
-1. 日期保存歷史，索引負責搜尋。
-2. Folder manifest 是路牌，不是第二個 article index。
-3. 每項事實只設一個 source of truth，但可有多個檢索視圖。
-4. 定期整理採增量讀取，不預設重讀完整 repo。
-5. 新內容不得直接成為共識。
+索引用來協助找到既有內容，不應取代正文、重新解釋使用者立場，或發展成第二套內容系統。
 
-## Canonical / Derived / Curated
+## 1. 基本規則
 
-| 類型 | 說明 | 例子 |
-|---|---|---|
-| Canonical | 明確編輯的主資料 | 正文、frontmatter、概念定義 |
-| Derived | 可依主資料檢查或生成 | manifest、索引一致性、broken links |
-| Curated | 需要人類校準 | MOC、weekly digest、monthly consensus |
+- 索引只能指向實際存在的檔案或條目；
+- 內容名稱、ID、slug 與語言版本沿用既有命名；
+- 索引摘要應保持簡短，不在索引中新增正文沒有的結論；
+- 同一內容可被多個入口引用，但不要複製出多份主內容；
+- 新增或修改內容時，只更新直接受影響的索引與連結。
 
-## Folder Manifest
+不確定一項內容應屬於哪個概念、系列或索引時，先保留現狀並標記待確認，不要自行建立新分類。
 
-兩層以上資料夾應有 README。年度 README 列月份；月份 README 列實際檔案。文章語義由 article index 負責。
+## 2. Folder README
 
-## Weekly Review
+資料夾 README 用來說明資料夾用途與列出其中內容。
 
-- 列出本週新增內容
-- Review inbox
-- 更新 dashboard / topic candidates
-- 檢查 tag / concept drift
-- 提出 MOC 更新建議
-- 提出 consensus candidates
-- 標記不得被誤讀為結論的內容
+- 只列實際存在的項目；
+- 不在 README 中重寫文章主張；
+- 不因單一新增檔案就重構整個資料夾層級；
+- 發現失效連結或重複項目時可以修正，但不得藉機批次改名。
 
-## Monthly Review
+## 3. 正式內容索引
 
-- 從 weekly digests 壓縮本月重點
-- 區分穩定判斷與 open questions
-- 檢查 dashboard、candidate、vocabulary 與 MOC 漂移
-- 提出 consensus 升降級建議
-- 保留使用者確認步驟
+只有已進入正式草稿、修訂或發布階段的內容，才加入 `writing/article-index.md`。
 
-## 搜尋順序
+Inbox、候選想法與尚未形成正文的內容，不因看起來重要就自動加入正式內容索引。
 
-Dashboard → Topic Candidates → Concept Vocabulary → Article Index → MOC / Series → Manifest → Weekly / Monthly → Full-text Search。
+移動正式內容時，檢查並更新：
 
-## 發布
+- 原有索引連結；
+- 直接相關的語言版本；
+- 明確引用該路徑的文件。
 
-移入 `04-published/YYYY/MM/` 後更新 manifest、article index 與 related versions。發布不等於 stable consensus。
+不要推測並同步沒有直接證據的關聯項目。
+
+## 4. 檢查與整理
+
+整理前可先執行：
+
+```bash
+python scripts/check-repo-integrity.py
+```
+
+AI 可以：
+
+- 修正失效連結；
+- 移除指向不存在內容的索引項；
+- 補上明確遺漏的直接連結；
+- 列出需要使用者判斷的分類衝突。
+
+AI 不得：
+
+- 自行創造新的索引種類或資料層；
+- 根據索引摘要改寫正文；
+- 將重複出現的說法自動視為正式共識；
+- 為追求完整性重建整個索引系統；
+- 把候選內容、外部資料或 AI 推論寫成使用者立場。
