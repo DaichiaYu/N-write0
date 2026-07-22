@@ -1,45 +1,51 @@
 # Writing Process
 
-```text
-Raw Capture
-  ↓
-Structured Idea Note
-  ↓
-Idea Map / Topic Candidate
-  ↓
-Writing Dashboard
-  ↓
-Formal Draft
-  ↓
-Revision
-  ↓
-Published / Canonical
-  ↓
-Consensus Candidate
-  ↓
-Confirmed AI Consensus
-```
+本文件只規範內容應放在哪個工作階段，以及 AI 在各階段可以做什麼。
+
+不同內容不必經過完全相同的中間步驟。不得為了補齊流程而製造沒有實際用途的文件。
 
 ## 1. Capture
 
-先保留觀察、直覺與不確定性，不要求完整文章。
+零碎觀察、直覺、問題與尚未確認的說法先放入 `01-inbox/`。
+
+此階段可以保留矛盾與不確定性，不要求形成文章，也不得直接視為使用者正式立場。
 
 ## 2. Position
 
-確認核心問題、目標讀者、使用情境與一句 `core_claim`。
+準備發展內容時，先確認：
+
+- 核心問題；
+- 寫作角度或身份；
+- 目標讀者；
+- 一句 `core_claim`；
+- 尚未確認的部分與 `not_my_claim`。
+
+資訊不足時維持原狀或提出問題，不要替使用者補出結論。
 
 ## 3. Draft
 
-已有主張與段落結構後，才進 `02-drafts/YYYY/MM/`。
+已有明確方向與可工作的正文骨架後，才進入 `02-drafts/YYYY/MM/`。
+
+建立草稿前應讀取對應模板、命名規則與直接相關的既有內容。不要因題目相近就自行合併成系列或概念。
 
 ## 4. Revision
 
-檢查語氣、主張範圍、來源、反方、not-my-claim 與 open questions。
+需要集中修改、準備分享或投稿的內容放入 `03-revision/`。
 
-## 5. Publish / Canonical
+修訂時檢查主張範圍、來源、語氣、反例、`not_my_claim`、`open_questions` 與語言版本關係。不得為了讓文章更完整而擴大原本主張。
 
-已公開不等於成為穩定共識；文章狀態與共識狀態必須分開。
+## 5. Published
+
+只有已定稿或已公開的內容才放入 `04-published/`。
+
+發布狀態只表示內容版本，不代表其中每個判斷都已成為長期立場。
 
 ## 6. Review
 
-每週做增量整理，每月做共識壓縮與漂移檢查。
+整理或檢查時，可以：
+
+- 列出新增與變更內容；
+- 找出缺少連結、命名衝突與狀態不一致；
+- 提出需要使用者確認的更新建議。
+
+不得自行批次升級內容、建立新流程、補建推測中的資料層，或把重複出現的說法直接寫成穩定共識。
