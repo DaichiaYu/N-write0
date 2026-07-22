@@ -1,20 +1,20 @@
 # Concept Dictionary
 
-這裡整理反覆出現的核心概念、詞彙、方法與判斷。
+這裡整理反覆出現的詞、方法與判斷。
 
-## 概念模板
+## Entry Template
 
-```md
+```markdown
 ## 概念名稱
 
+- status: draft / testing / stable / deprecated
+- preferred_term:
+- aliases:
+- related_moc:
+
 ### 暫定定義
-
-### 這個概念用來解決什麼問題
-
+### 用來解決什麼問題
 ### 容易被誤解成什麼
-
-### 相關筆記
-
-### 狀態
-- draft / testing / stable
+### 相關內容
+### 變更紀錄
 ```

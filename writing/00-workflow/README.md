@@ -1,10 +1,17 @@
 # 00-workflow
 
-這裡放使用流程、筆記模板、整理規則與 AI 協作提醒。
+這裡保存流程、模板、詞彙與檢查規則。
 
-建議至少保留：
+## 核心文件
 
-- `note-process.md`：想法如何從片段變成可用筆記
-- `style-guide.md`：個人語氣與整理偏好
-- `note-template.md`：一般想法筆記模板
-- `translation-template.md`：需要中英文改寫時使用
+- `writing-process.md`
+- `inbox-rules.md`
+- `draft-normalization-checklist.md`
+- `indexing-rules.md`
+- `consensus-lifecycle.md`
+- `drift-and-sync-review.md`
+- `tag-vocabulary.md`
+- `concept-vocabulary.md`
+- `templates/`
+
+規則文件是流程 source of truth；模板只負責提供格式，不應另創一套規則。

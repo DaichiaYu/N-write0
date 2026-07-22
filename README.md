@@ -1,91 +1,49 @@
 # N-write0
 
-N-write0 是一個用來記錄、整理與發展想法的公開模板，目標是幫使用者把自己的想法、判斷與不確定性整理成 AI 可以長期正確理解的形式。
+N-write0 是一個可複製、可分享的「使用者想法整理與 AI 理解校準」模板。
 
-這個倉庫不是正式文章工作台，也不只是單純筆記模板。它是一個輕量版的「AI 理解校準模板」：使用者可以先收集零碎觀察，再慢慢整理成草稿、概念、研究筆記、可分享內容，或給 AI 協作時使用的正式參考資料。
+它保留 N-write 的核心操作骨架，但不包含任何特定使用者的文章、立場、產品資料或研究內容。使用者可以從零碎想法開始，逐步整理成可搜尋的草稿、概念地圖與 AI 可引用的穩定判斷。
 
-換句話說：
+> 記憶保存你說過什麼；這套結構協助判斷，哪些內容現在足以代表你。
 
-> 記憶讓 AI 知道你說過什麼；N-write0 幫你整理哪些內容才足以代表你。
+## 入口
 
-N-write0 的重點不是逼使用者立刻寫出完整文章，而是讓想法有地方長大，並且在長大的過程中逐漸標出：哪些是我的想法、哪些只是外部觀點、哪些還不確定、哪些可以讓 AI 之後引用。
+- `AGENTS.md`：AI Agent 第一入口與任務分流
+- `writing/目錄.md`：人類與 AI 的文件導航
+- `writing/article-index.md`：正式草稿與定稿索引
+- `writing/01-inbox/writing-dashboard.md`：近期可發展方向
+- `writing/01-inbox/topic-candidates.md`：可整理主題池
+- `scripts/check-repo-integrity.py`：只讀結構檢查
 
-## 這個模板適合誰
-
-N-write0 不只適合創作者或創辦人，也適合任何想讓 AI 長期更準確理解自己的人。
-
-例如：
-
-- 想整理個人想法與價值觀的人；
-- 想建立 AI 協作筆記的人；
-- 想把對話中的靈感變成可追蹤筆記的人；
-- 想避免 AI 把臨時想法誤認成正式立場的人；
-- 想把研究、學習、創作或產品判斷整理成長期資料的人。
-
-## 主要資料夾
+## 主要結構
 
 ```text
 writing/
-  00-workflow/        流程、模板、使用說明與 AI 協作提醒
-  01-inbox/           尚未整理的想法、靈感、片段觀察
-  02-drafts/          初步整理後的草稿或長筆記
-  03-revision/        修訂中、準備分享或定稿的版本
-  04-published/       已公開或已定稿內容
-  05-series/          系列主題索引
-  06-concepts/        反覆出現的核心概念、詞彙與方法
-  07-research-notes/  資料、案例、引用來源與閱讀筆記
-  08-ai-consensus/    給 AI 協作時使用的共識、限制與提醒
+  00-workflow/        流程、模板、詞彙與整理規則
+  01-inbox/           raw capture、idea note、idea map
+  02-drafts/          已形成主張的草稿
+  03-revision/        修訂中或準備分享的版本
+  04-published/       已定稿或已公開版本
+  05-series/          系列索引
+  06-concepts/        MOC、概念地圖與概念字典
+  07-research-notes/  外部資料與來源筆記
+  08-ai-consensus/    使用者立場、判斷邏輯與 AI 共識層
 ```
 
-## 使用方式
+## 核心原則
 
-1. 有想法先放進 `writing/01-inbox/`，不要急著整理漂亮。
-2. 想法變清楚後，再移到 `writing/02-drafts/`。
-3. 準備修改、分享、投稿或定稿時，放進 `writing/03-revision/`。
-4. 已公開或已定稿的內容，放進 `writing/04-published/`。
-5. 反覆出現的概念，可整理到 `writing/06-concepts/`。
-6. 讀到的資料、案例與引用來源，可放進 `writing/07-research-notes/`。
-7. 需要讓 AI 理解你的長期判斷時，可整理到 `writing/08-ai-consensus/`。
+1. 先分辨內容成熟度，再決定放置位置。
+2. `01-inbox` 的內容不得直接視為使用者正式立場。
+3. 使用者主張、外部觀點、AI 延伸與未確認問題必須分開。
+4. 新想法只能先成為 candidate，不得自動升級為 active／stable 共識。
+5. 日期保存歷史；索引、vocabulary 與 MOC 負責搜尋。
+6. 每週做增量整理，每月才做較穩定的共識壓縮。
+7. 修改重要判斷時保留舊版本與變更原因，不直接抹除歷史。
 
-## AI 協作原則
+## 最快開始方式
 
-使用 N-write0 時，建議要求 AI 遵守以下原則：
+1. 先讀 `AGENTS.md` 與 `writing/目錄.md`。
+2. 把第一則零碎想法放進 `writing/01-inbox/YYYY/MM/YYYY-MM-DD-inbox.md`。
+3. 每週檢查是否有內容值得升級成 topic candidate、draft 或 consensus candidate。
 
-1. 不要只依賴聊天記憶，應優先讀取已整理過的正式筆記、概念與共識。
-2. 不要把 `01-inbox` 裡的零碎想法直接當成使用者立場。
-3. 不要把外部資料、引用、討論素材或 AI 延伸內容誤認成使用者主張。
-4. 當想法尚未定稿時，應標記為待確認，而不是替使用者下結論。
-5. 當使用者修正想法時，應保留版本脈絡，避免一直引用舊說法。
-6. 重要判斷應整理成可被之後查找的標題、摘要與關鍵概念。
-
-## 建議筆記欄位
-
-```yaml
-title:
-date:
-status: inbox | draft | revision | published
-language: zh-TW
-summary:
-core_claim:
-user_stance:
-  - "我目前願意承擔的想法或判斷"
-not_my_claim:
-  - "外部觀點、資料或 AI 延伸，不代表我已採納"
-open_questions:
-  - "我還不確定、需要繼續想或驗證的地方"
-related_concepts:
-  - 
-ai_use:
-  - reference_for_future_discussion
-  - writing_context
-  - decision_context
-```
-
-## N-write0 與 N-write 的差異
-
-- **N-write0**：公開、輕量、可分享給別人測試的模板，適合建立個人 AI 理解校準流程。
-- **N-write**：私有、具體、承載使用者長期文章、概念、產品判斷與正式 AI 共識的工作台。
-
-N-write0 是骨架；N-write 是長出內容與判斷後的工作台。
-
-這裡的重點不是逼自己立刻寫出完整文章，而是讓想法有地方長大。不要一開始就把靈感逼成畢業論文，它會當場裝死。
+N-write0 是骨架；內容、判斷與語氣，必須由使用者自己逐步長出來。

@@ -1,28 +1,23 @@
-# 08-ai-consensus
+# AI Consensus
 
-這裡整理給 AI 協作時使用的共識層。
+這裡保存目前 AI 可以引用的使用者判斷，不保存所有想法。
 
-可以放：
-
-- 已確認的長期判斷
-- 暫時不採用的方向
-- AI 容易誤解的地方
-- 使用者偏好的整理方式
-- 需要被反覆引用的背景資訊
-
-## 共識筆記模板
-
-```md
-# 共識標題
-
-## 已確認判斷
-
-## 不代表我的意思
-
-## AI 協作時要注意
-
-## 相關筆記或來源
-
-## 狀態
-- draft / testing / stable
+```text
+08-ai-consensus/
+  README.md
+  consensus-candidates.md
+  user-stance-index.md
+  decision-logic-index.md
+  not-my-claim-index.md
+  open-questions-index.md
+  weekly-digests/
+  monthly-consensus/
 ```
+
+## 原則
+
+- 優先參考本資料夾，而不是依賴聊天壓縮記憶。
+- 新內容先進 candidate registry。
+- open questions 不得被說成結論。
+- not-my-claim 不得被改寫成使用者主張。
+- 觀點改變時保留歷史與改變原因。
